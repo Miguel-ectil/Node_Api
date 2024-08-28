@@ -1,7 +1,8 @@
 import { Router } from 'express';
-import apiController from '../controllers/apiController'
+import { uploadImage } from '../controllers/imagemControll';
 
 const router = Router();
-router.get('/example', apiController.getTeste);
+
+router.post('/upload-image', uploadImage);
 
 export default router;
