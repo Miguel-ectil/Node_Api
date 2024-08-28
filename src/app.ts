@@ -1,7 +1,10 @@
 import express from 'express';
-import routes from './routes';
+import bodyParser from 'body-parser';
+import imageRoutes from './routes/index';
 
 const app = express();
-app.use('/api', routes);
+
+app.use(bodyParser.json({ limit: '50mb' }));
+app.use('/api', imageRoutes);
 
 export default app;
