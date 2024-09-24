@@ -12,5 +12,5 @@ app.use(bodyParser.json({ limit: '50mb' }));
 app.use('/api', imageRoutes);
 
 app.listen(PORT, () => {
-  console.log(`Servidor sendo executado na porta ${PORT}`);
+  console.log(`O servidor está sendo executado na porta ${PORT}`);
 });
